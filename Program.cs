@@ -7,7 +7,7 @@ namespace Timer
 {
     internal class Program
     {
-        static int _count = 0;
+        static int? _count = null;
         static int _timers = 0;
         static void Main(string[] args)
         {
@@ -66,14 +66,14 @@ namespace Timer
                     }
                     catch (FormatException)
                     {
-                        _count = 0;
+                        _count = null;
 
                         Console.WriteLine();
                        
                         Console.Write("How many !seconds! do you want to set: ");
                     }
                     
-                    if (_count == 0) { True = true; }
+                    if (_count == null) { True = true; }
                     else { True = false; }
                 }
                 
